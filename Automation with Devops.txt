@@ -1,0 +1,62 @@
+1. Selenium (Automation Testing - Core Skill)
+Goal: Learn to automate browser tasks using Selenium WebDriver.
+Best Way to Learn:
+Understand Basics of Testing:
+Learn about manual vs automation testing.
+Understand test cases, test suites, bugs, etc.
+Pick a Programming Language:
+Start with Java or Python (most used with Selenium).
+Learn OOP concepts, functions, loops, exception handling.
+Learn Selenium WebDriver:
+Basics: Launch browser, find elements, click, input text.
+Advanced: Waits (implicit/explicit), handling pop-ups, frames, dropdowns.
+Page Object Model (POM): Structure your test code efficiently.
+Messages addressed to "meeting group chat" will also appear in the meeting group chat in Team Chat
+
+cloud meta 10:39 AM
+Practice Projects:
+Automate login pages, search flows, form submissions.
+Use test sites like https://the-internet.herokuapp.com.
+Learn Test Frameworks:
+Java: TestNG / JUnit
+Python: PyTest / Unittest
+Learn assertions, test reports, parameterization.
+🔹 2. CI/CD - Jenkins (DevOps Integration)
+Goal: Automate test execution and deployment process.
+Best Way to Learn:
+Understand CI/CD Concepts:
+Continuous Integration: Code merge & testing.
+Continuous Delivery: Automated deployment.
+Install Jenkins Locally (or use Docker):
+Learn Jenkins architecture, pipelines, plugins.
+Create Jobs:
+Freestyle project: Trigger Selenium scripts.
+Pipeline (Groovy syntax): Build -> Test -> Report.
+Integrate with Git & Test Framework:
+Clone from GitHub/Bitbucket.
+Run tests & publish reports in Jenkins.
+Automate with Webhooks:
+Auto-trigger builds when code is pushed.
+. Bitbucket / GitHub (Version Control)
+Goal: Manage and collaborate on code efficiently.
+Best Way to Learn:
+Understand Git Basics:
+git init, add, commit, push, pull, branch, merge.
+Learn using CLI, then GUI (SourceTree or VS Code extensions).
+Host Repos on GitHub/Bitbucket:
+Create, clone, fork repos.
+Collaborate using pull requests, code reviews.
+Use in Real Projects:
+Track test scripts in Git.
+Connect repo to Jenkins for automated builds.
+🔹 4. Agile Methodology (Jira)
+Goal: Understand Agile project management & test planning.
+Best Way to Learn:
+Learn Agile Basics:
+Scrum framework: roles (Product Owner, Scrum Master), sprints, stand-ups, retros.
+Jira for Testers:
+Create user stories, bugs, tasks.
+Update sprint boards.
+Link issues with test cases.
+Use Jira in Practice:
+Join sample projects or use Jira trial.
