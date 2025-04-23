@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Automation Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input, select {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .error {
+            color: red;
+            font-size: 0.8em;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>QA Automation Test Page</h1>
+    
+    <div class="test-section">
+        <h2>Login Form</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required minlength="6">
+            
+            <button type="submit">Login</button>
+            <p id="loginError" class="error"></p>
+        </form>
+    </div>
+    
+    <div class="test-section">
+        <h2>Dynamic Content</h2>
+        <button id="loadData">Load Data</button>
+        <div id="dynamicContent"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Dropdown Test</h2>
+        <select id="colorSelect">
+            <option value="">Select a color</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <div id="selectedColor"></div>
+    </div>
+    
+    <div id="result"></div>
+
+    <script>
+        // Login Form Handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username === 'admin' && password === 'admin123') {
+                document.getElementById('result').innerHTML = 
+                    '<p>Login successful! Welcome, ' + username + '.</p>';
+                document.getElementById('loginError').textContent = '';
+            } else {
+                document.getElementById('loginError').textContent = 
+                    'Invalid credentials. Try admin/admin123';
+            }
+        });
+        
+        // Dynamic Content Loading
+        document.getElementById('loadData').addEventListener('click', function() {
+            const contentDiv = document.getElementById('dynamicContent');
+            contentDiv.innerHTML = '<p>Loading...</p>';
+            
+            setTimeout(() => {
+                contentDiv.innerHTML = `
+                    <h3>Sample Data Loaded</h3>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                `;
+            }, 1000);
+        });
+        
+        // Dropdown Change Event
+        document.getElementById('colorSelect').addEventListener('change', function() {
+            const color = this.value;
+            if (color) {
+                document.getElementById('selectedColor').innerHTML = `
+                    <p>You selected: <span style="color:${color}">${color}</span></p>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
